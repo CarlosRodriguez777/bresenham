@@ -56,6 +56,9 @@ let tamanoCelda = 20;
 function dibujarCuadricula() {
     // Limpiar el canvas antes de dibujar
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    ctx.font = "10px Arial";
+    ctx.fillStyle = "black";
     
     // Dibujar líneas
     for (let i = 0; i <= canvas.width; i += tamanoCelda) {
@@ -64,11 +67,15 @@ function dibujarCuadricula() {
         ctx.moveTo(i, 0);
         ctx.lineTo(i, canvas.height);
         ctx.stroke();
+        let numX = i / tamanoCelda;
+        ctx.fillText(numX, i + 2, canvas.height - 2); // Número en la parte inferior
 
         // Líneas horizontales
         ctx.beginPath();
         ctx.moveTo(0, i);
         ctx.lineTo(canvas.width, i);
         ctx.stroke();
+        let numY = (canvas.height - i) / tamanoCelda; 
+        ctx.fillText(numY, 2, i - 2); // Número en el costado izquierdo
     }
 }
