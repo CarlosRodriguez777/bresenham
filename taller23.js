@@ -44,5 +44,31 @@ function iniciar() {
     let x1 = parseInt(document.getElementById("x1").value);
     let y1 = parseInt(document.getElementById("y1").value);
 
+    dibujarCuadricula(); // Llamamos a la nueva función 
+}
+
+// Variables globales para el canvas
+let canvas = document.getElementById("miCanvas");
+let ctx = canvas.getContext("2d");
+let tamanoCelda = 20;
+
+// Método nuevo para dibujar la cuadrícula
+function dibujarCuadricula() {
+    // Limpiar el canvas antes de dibujar
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     
+    // Dibujar líneas
+    for (let i = 0; i <= canvas.width; i += tamanoCelda) {
+        // Líneas verticales
+        ctx.beginPath();
+        ctx.moveTo(i, 0);
+        ctx.lineTo(i, canvas.height);
+        ctx.stroke();
+
+        // Líneas horizontales
+        ctx.beginPath();
+        ctx.moveTo(0, i);
+        ctx.lineTo(canvas.width, i);
+        ctx.stroke();
+    }
 }
