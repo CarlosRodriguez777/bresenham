@@ -36,3 +36,13 @@ function bresenham(x0, y0, x1, y1, plot) {
         }
     }
 }
+
+function iniciar() {
+    // Obtener los valores de los cuadros de texto y convertirlos a números
+    let x0 = parseInt(document.getElementById("x0").value);
+    let y0 = parseInt(document.getElementById("y0").value);
+    let x1 = parseInt(document.getElementById("x1").value);
+    let y1 = parseInt(document.getElementById("y1").value);
+
+    
+}
