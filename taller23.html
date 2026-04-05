@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Algoritmo de Bresenham</title>
+</head>
+<body>
+    <h1>Trazado de Línea - Bresenham</h1>
+    
+    <div>
+        <label>X0: <input type="number" id="x0" value="0"></label>
+        <label>Y0: <input type="number" id="y0" value="0"></label>
+        <label>X1: <input type="number" id="x1" value="10"></label>
+        <label>Y1: <input type="number" id="y1" value="8"></label>
+        <button onclick="iniciar()">Dibujar</button>
+    </div>
+
+    <br>
+
+    <canvas id="miCanvas" width="400" height="400" style="border:1px solid black;"></canvas>
+
+    <table id="tablaValores" border="1">
+        <thead>
+            <tr>
+                <th>X</th>
+                <th>Y</th>
+                <th>Error (err)</th>
+                <th>e2</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTabla">
+            </tbody>
+    </table>
+
+    <script src="taller23.js"> </script>
+</body>
+</html>
